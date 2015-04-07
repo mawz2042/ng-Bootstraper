@@ -4,11 +4,19 @@
   */
 
 (function() { // Create application
-    var app = angular.module('myApp', []);
+    var app = angular.module('myApp', ['ui.bootstrap']);
 
-    app.controller('MainAppCtrl', [
+    app.controller('MenuCtrl', [
+        '$scope', function($scope) {
+            $scope.title = 'Partners';
+            $scope.navbarCollapsed = true;
+        }
+    ]);
+    app.controller('HomeCtrl', [
         '$scope', function($scope) {
             $scope.title = 'Partners';
         }
     ]);
+
+
 }());
